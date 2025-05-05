@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import ModeToggle from './ModeToggle';
 
 export default function Navbar() {
   return (
@@ -21,6 +22,12 @@ export default function Navbar() {
           <Link href="/services">Services</Link>
           <Link href="/technologies">Technologies</Link>
           <Link href="/contact">Contact</Link>
+        </div>
+        <div className="hidden md:flex items-center gap-4">
+          <ModeToggle />
+          {/* <Link href="/contact" className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/80 transition">
+            Get a Quote
+          </Link> */}
         </div>
       </nav>
     </motion.header>
